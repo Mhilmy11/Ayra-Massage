@@ -1,4 +1,6 @@
 import './App.css';
+import { useRef } from 'react';
+import Container from './Components/Container'
 import AyraLogo from './Assets/00978 (1)_page-0001 1.png'
 import HeroAssets from './Assets/adult-beautiful-woman-relaxing-spa-salon-with-hot-stones-back 1.png'
 import ReflexiologyAssets from './Assets/adult-beautiful-woman-relaxing-spa-salon-with-hot-stones-back 3.png'
@@ -8,13 +10,32 @@ import LulurAssets from './Assets/spa-concept-with-woman-massage.png'
 import FaceAssets from './Assets/massage-face.png'
 import CandleAssets from './Assets/close-up-therapist-using-candle-ear.png'
 import KerokanAssets from './Assets/woman-salon-making-beauty-treatment-with-gua-sha-stone.png'
-import Container from './Components/Container'
+import WavePng from './Assets/wave.png'
+import { FaLocationDot, FaWhatsapp } from "react-icons/fa6";
+import { HiOutlineMail } from "react-icons/hi";
 
 function App() {
+
+  const about = useRef(null);
+  const services = useRef(null);
+  const home = useRef(null);
+
+  const handleClickToHome = () => {
+    home.current?.scrollIntoView({behavior: 'smooth'})
+  }
+
+  const handleClickToServices = () => {
+    services.current?.scrollIntoView({behavior: 'smooth'})
+  }
+
+  const handleClickToAbout = () => {
+    about.current?.scrollIntoView({behavior: 'smooth'})
+  }
+
   return (
     <>
 
-      <div>
+      <div ref={home}>
         <div className=' flex items-center h-[800px]'>
           <div className=' absolute left-[200px]'>
             <h1 className=' font-bold text-[48px] w-[481px]'>Family Massage & Reflexiology</h1>
@@ -22,32 +43,29 @@ function App() {
               <button className=' cardcolor w-[220px] h-[49px] rounded-full text-white font-semibold text-[24px] flex items-center justify-center'>Book Now!</button>
             </div>
           </div>
-          <img className=" w-full h-[800px] pt-[100px]" src={HeroAssets} alt='Hero' />
+          <img className=" w-full h-[900px]" src={HeroAssets} alt='Hero' />
         </div>
       </div>
 
 
       <header className=' absolute top-0'>
-        <div className=' fixed bg-white w-full h-[217px] flex justify-center shadow-xl'>
+        <div className=' fixed bg-white w-full h-[217px] flex justify-center shadow-xl opacity-90'>
           <div>
-
             <div className=' flex justify-center py-5'>
               <img src={AyraLogo} alt='Ayra'/>
             </div>
-
             <div className=' text-[20px] font-semibold'>
-            <a href="">Home</a>
-            <a className=' px-8' href="">Services</a>
-            <a href="">About</a>
-          </div>          
-
+              <button onClick={handleClickToHome}>Home</button>
+              <button onClick={handleClickToServices} className=' px-8'>Services</button>
+              <button onClick={handleClickToAbout}>About</button>
+            </div>          
           </div>
         </div>
       </header>
 
 
-      <div>
-        <div className=' flex justify-center pt-[46px] font-bold text-[40px]'>Services</div>
+      <div ref={services} className=' pt-[100px]'>
+        <div className=' flex justify-center font-bold text-[40px]'>Services</div>
         <div className=' flex justify-center pt-2'>
           <div className=' bg-black w-[1050px] h-[1px]'></div>
         </div>
@@ -195,19 +213,29 @@ function App() {
       </div>
 
 
-      <div className=' pt-[100px]'>
-        <div className=' cardcolor w-full h-[271px]'>
-          <Container>
-            <div className=' flex items-center h-[271px] w-full'>
-              <div className=' text-white'>
-                <h1 className=' text-[50px] font-semibold'>About</h1>
-                <p>Address :</p>
-                <p>Whatsapp Number :</p>
-                <p>Email :</p>
+      <div className=' pt-[100px]'>    
+        <div className=' absolute flex items-center justify-center h-[300px] w-full'>
+          <div className=' text-white text-center'>
+            <h1 ref={about} className=' text-[50px] font-semibold'>About Information</h1>
+            <div className=' flex pt-5'>
+              <div className=' flex items-center w-[400px]'>
+                <div className=' pr-3 text-black'><FaLocationDot size={50}/></div>
+                <p className=' font-medium'>Ruko Citra Grand Blok R3/10, Komplek Ruko Mall Ciputra.
+                  JI. Alternatif Cibubur Cileungsi KM 4 RT 005 RW 011,
+                  Kel. Jatikarya, Kec. Jatisampurna, Kota Bekasi, Jawa Barat 17435</p>
+              </div>
+              <div className=' flex items-center px-[100px]'>
+                <div className=' pr-3 text-black'><FaWhatsapp size={50} /></div>
+                <p className=' font-medium text-[20px]'>+62 853-1198-5211</p>
+              </div>
+              <div className=' flex items-center'>
+                <div className=' pr-3 text-black'><HiOutlineMail size={50} /></div>
+                <p className=' font-medium text-[20px]'>..............</p>
               </div>
             </div>
-          </Container>
+          </div>
         </div>
+        <img className=' w-full h-[300px] cardcolor' src={WavePng} alt="FooterAssets" />
       </div>
 
     </>
