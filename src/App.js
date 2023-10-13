@@ -11,8 +11,9 @@ import FaceAssets from './Assets/massage-face.png'
 import CandleAssets from './Assets/close-up-therapist-using-candle-ear.png'
 import KerokanAssets from './Assets/woman-salon-making-beauty-treatment-with-gua-sha-stone.png'
 import WavePng from './Assets/wave.png'
-import { FaLocationDot, FaWhatsapp } from "react-icons/fa6";
-import { HiOutlineMail } from "react-icons/hi";
+import { FaLocationDot, FaWhatsapp } from "react-icons/fa6"
+import { HiOutlineMail } from "react-icons/hi"
+import ReactWhatsapp from 'react-whatsapp';
 
 function App() {
 
@@ -37,10 +38,12 @@ function App() {
 
       <div ref={home}>
         <div className=' flex items-center h-[800px]'>
-          <div className=' absolute left-[200px]'>
+          <div className=' absolute left-[200px] top-[450px]'>
             <h1 className=' font-bold text-[48px] w-[481px]'>Family Massage & Reflexiology</h1>
             <div className=' pt-[30px]'>
-              <button className=' cardcolor w-[220px] h-[49px] rounded-full text-white font-semibold text-[24px] flex items-center justify-center'>Book Now!</button>
+              <button className=' button-5'>
+                <ReactWhatsapp number='+62 85311985211' massage='Hallo kak!, Saya ingin Booking di Ayra Massage'>Book Now!</ReactWhatsapp>
+              </button>
             </div>
           </div>
           <img className=" w-full h-[900px]" src={HeroAssets} alt='Hero' />
@@ -49,7 +52,7 @@ function App() {
 
 
       <header className=' absolute top-0'>
-        <div className=' fixed bg-white w-full h-[217px] flex justify-center shadow-xl opacity-90'>
+        <div className=' fixed bg-white w-full h-[217px] flex justify-center shadow-xl opacity-100'>
           <div>
             <div className=' flex justify-center py-5'>
               <img src={AyraLogo} alt='Ayra'/>
@@ -219,18 +222,18 @@ function App() {
             <h1 ref={about} className=' text-[50px] font-semibold'>About Information</h1>
             <div className=' flex pt-5'>
               <div className=' flex items-center w-[400px]'>
-                <div className=' pr-3 text-black'><FaLocationDot size={50}/></div>
+                <div className=' pr-3'><FaLocationDot size={50}/></div>
                 <p className=' font-medium'>Ruko Citra Grand Blok R3/10, Komplek Ruko Mall Ciputra.
                   JI. Alternatif Cibubur Cileungsi KM 4 RT 005 RW 011,
                   Kel. Jatikarya, Kec. Jatisampurna, Kota Bekasi, Jawa Barat 17435</p>
               </div>
               <div className=' flex items-center px-[100px]'>
-                <div className=' pr-3 text-black'><FaWhatsapp size={50} /></div>
+                <div className=' pr-3'><FaWhatsapp size={50} /></div>
                 <p className=' font-medium text-[20px]'>+62 853-1198-5211</p>
               </div>
               <div className=' flex items-center'>
-                <div className=' pr-3 text-black'><HiOutlineMail size={50} /></div>
-                <p className=' font-medium text-[20px]'>..............</p>
+                <div className=' pr-3'><HiOutlineMail size={50} /></div>
+                <p className=' font-medium text-[20px]'>ayramassage@gmail.com</p>
               </div>
             </div>
           </div>
