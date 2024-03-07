@@ -39,7 +39,7 @@ function App() {
       <div ref={home}>
         <div className=' flex items-center h-[800px]'>
           <div className=' absolute left-[200px] top-[450px]'>
-            <h1 className=' font-bold text-[48px] w-[481px]'>Family Massage & Reflexiology</h1>
+            <h3 className=' font-bold text-[48px] w-[481px]'>Family Massage & Reflexiology</h3>
             <div className=' pt-[30px]'>
               <button className=' button-5'>
                 <ReactWhatsapp number='+62 85311985211' massage='Hallo kak!, Saya ingin Booking di Ayra Massage'>Book Now!</ReactWhatsapp>
@@ -82,12 +82,12 @@ function App() {
               <img className=' rounded-3xl w-[632px] h-[472px]' src={ReflexiologyAssets} alt='Refelxiology'/>
             </div>
             <div>
-              <div className=' pb-[30px] font-bold text-[34px]'>Reflexiology</div>
+              <h1 className=' pb-[30px] font-bold text-[34px]'>Reflexiology</h1>
               <div className=' cardcolor rounded-2xl flex justify-center items-center'>
                 <div className=' text-white font-semibold text-[35px] p-[30px]'>
                   <p>Rp. 70.000 - 1 JAM</p>
-                  <p className=' py-[30px]'>Rp. 90.000 - 1 JAM</p>
-                  <p>Rp. 110.000 - 1 JAM</p>
+                  <p className=' py-[30px] flex'>Rp. 90.000 - 1 <p className=' text-lg pr-3'>1/2</p> JAM</p>
+                  <p>Rp. 110.000 - 2 JAM</p>
                 </div>
               </div>
             </div>
@@ -104,8 +104,8 @@ function App() {
               <div className=' cardcolor rounded-2xl flex justify-center items-center'>
                 <div className=' text-white font-semibold text-[35px] p-[30px]'>
                   <p>Rp. 80.000 - 1 JAM</p>
-                  <p className=' py-[30px]'>Rp. 110.000 - 1 JAM</p>
-                  <p>Rp. 140.000 - 1 JAM</p>
+                  <p className=' py-[30px] flex'>Rp. 110.000 - 1 <p className=' text-lg pr-3'>1/2</p> JAM</p>
+                  <p>Rp. 140.000 - 2 JAM</p>
                 </div>
               </div>
             </div>
@@ -128,8 +128,8 @@ function App() {
               <div className=' cardcolor rounded-2xl flex justify-center items-center'>
                 <div className=' text-white font-semibold text-[35px] p-[30px]'>
                   <p>Rp. 120.000 - 1 JAM</p>
-                  <p className=' py-[30px]'>Rp. 150.000 - 1 JAM</p>
-                  <p>Rp. 200.000 - 1 JAM</p>
+                  <p className=' py-[30px] flex'>Rp. 150.000 - 1 <p className=' text-lg pr-3'>1/2</p> JAM</p>
+                  <p>Rp. 200.000 - 2 JAM</p>
                 </div>
               </div>
             </div>
@@ -146,8 +146,8 @@ function App() {
               <div className=' cardcolor rounded-2xl flex justify-center items-center'>
                 <div className=' text-white font-semibold text-[35px] p-[30px]'>
                   <p>Rp. 150.000 - 1 JAM</p>
-                  <p className=' py-[30px]'>Rp. 180.000 - 1 JAM</p>
-                  <p>Rp. 220.000 - 1 JAM</p>
+                  <p className=' py-[30px] flex'>Rp. 180.000 - 1 <p className=' text-lg pr-3'>1/2</p> JAM</p>
+                  <p>Rp. 220.000 - 2 JAM</p>
                 </div>
               </div>
             </div>
