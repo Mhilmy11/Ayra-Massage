@@ -220,16 +220,16 @@ function App() {
         <div className=' absolute flex items-center justify-center h-[300px] w-full'>
           <div className=' text-white text-center'>
             <h1 ref={about} className=' text-[50px] font-semibold'>About Information</h1>
-            <div className=' flex pt-5'>
-              <div className=' flex items-center w-[400px]'>
+            <div className=' flex mt-11'>
+              <div className=' flex items-center'>
+                <div className=' pr-3'><FaWhatsapp size={50} /></div>
+                <p className=' font-medium text-[20px]'>+62 853-1198-5211</p>
+              </div>
+              <div className=' flex items-center w-[700px] px-[100px]'>
                 <div className=' pr-3'><FaLocationDot size={50}/></div>
                 <p className=' font-medium'>Ruko Citra Grand Blok R3/10, Komplek Ruko Mall Ciputra.
                   JI. Alternatif Cibubur Cileungsi KM 4 RT 005 RW 011,
                   Kel. Jatikarya, Kec. Jatisampurna, Kota Bekasi, Jawa Barat 17435</p>
-              </div>
-              <div className=' flex items-center px-[100px]'>
-                <div className=' pr-3'><FaWhatsapp size={50} /></div>
-                <p className=' font-medium text-[20px]'>+62 853-1198-5211</p>
               </div>
               <div className=' flex items-center'>
                 <div className=' pr-3'><HiOutlineMail size={50} /></div>
